@@ -1,0 +1,4 @@
+{
+  "title": "Session Manager",
+  "description": "Adds a durable “Delete session” action to the workspace session row menu."
+}

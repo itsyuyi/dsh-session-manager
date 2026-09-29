@@ -1,0 +1,4 @@
+{
+  "title": "会话管理",
+  "description": "为 DeepSeek Harness 侧栏会话菜单添加“删除会话”：弹窗确认、彻底清除日志与工作区登记。"
+}

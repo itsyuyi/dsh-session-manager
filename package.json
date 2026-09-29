@@ -1,0 +1,70 @@
+{
+  "name": "@itsyuyi/dsh-session-manager",
+  "version": "1.0.0",
+  "description": "DeepSeek Harness plugin: workspace session management — a durable “Delete session” action with a host-styled confirmation dialog, right in the sidebar session menu.",
+  "license": "MIT",
+  "author": "itsyuyi <itsyuyi@126.com>",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "verify-session.mjs",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "icon": "./icon.svg",
+  "meta": {
+    "title": "Session Manager",
+    "description": "Adds a durable “Delete session” action to the workspace session row menu."
+  },
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "session-management",
+    "session-delete",
+    "workspace",
+    "sidebar"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.0 <5",
+    "react": ">=18.2.0 <19"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsyuyi/dsh-session-manager.git"
+  },
+  "homepage": "https://github.com/itsyuyi/dsh-session-manager#readme",
+  "bugs": {
+    "url": "https://github.com/itsyuyi/dsh-session-manager/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ]
+    }
+  }
+}
